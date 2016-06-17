@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal" android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <ImageView
         android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_height="140dp"
+        android:layout_centerVertical="true"
         android:id="@+id/ivPoster"
         android:src="@mipmap/ic_launcher" />
 
@@ -13,10 +14,30 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Large Text"
+        android:textSize="16sp"
         android:id="@+id/tvTitle"
         android:layout_gravity="center_horizontal"
-        android:textSize="26sp"
-        android:padding="10dp" />
+        android:layout_toEndOf="@+id/ivPoster"
+        android:paddingTop="10dp"
+        android:paddingLeft="0dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="0dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/ivPoster" />
 
-</LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textSize="12sp"
+        android:id="@+id/tvOverview"
+        android:layout_below="@+id/tvTitle"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/ivPoster"
+        android:layout_toEndOf="@+id/ivPoster"
+        android:maxLines="10"
+        android:ellipsize="end"
+        android:singleLine="false"/>
+
+</RelativeLayout>
